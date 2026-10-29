@@ -2,4 +2,6 @@ cmake_minimum_required(VERSION 3.23)
 
 project(DeviceTestPlatform)
 
-add_executable(device_test_platform src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
+
+target_include_directories(${PROJECT_NAME} PRIVATE inc)
