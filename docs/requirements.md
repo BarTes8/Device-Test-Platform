@@ -53,14 +53,46 @@ FR-06. Error Simulation
        The platform shall support simulation of abnormal device behavior such as missing readings,
        invalid values and device disconnection.
 FR-07. Automated Test Execution
+       The platform shall execute predefined test scenarios against simulated devices.
 FR-08. Test Results
+       The platform shall record test results including:
+       - test name
+       - execution status
+       - expected result
+       - actual result
+       - failure information when applicable
 FR-09. Report Generation
+       The platform shall generate reports containing measurement data and test execution results.
 FR-10. Repeatability
+       The platform shall support repeatable test scenarios so that the same input conditions can produce reproducible results.
 
 4. Non-Functional Requirements
+NFR-01. Maintainability
+        The code shall be organized into logical components with clearly defined responsibilities.
+NFR-02. Testability
+        Core functionality shall be designed so that it can be tested independly.
+NFR-03. Reliability
+        The application shall handle invalid inputs and simulated device failures without unexpected termination.
+NFR-04. Portability
+        The project should support development and building on Windows and Linux where practical.
+NFR-05. Reproducibility
+        Tests should produce predictable results and avoid unnecessary dependencies on real time or external systems.
+NFR-06. Code Quality
+        The implementation should follow modern C++ practices and use appropriate language features.
+NFR-07. Documentation
+        The project should include documentation describing its purpose, architecture, build instructions and testing strategy.
 
 5. Technical Requirements and Constraints
+- Programming language C++17 as the initial baseline
+- Build system: CMake
+- Version control: Git and GitHub
+- Unit testing: Catch2 or Google Test
+- Application interface: Command-line interface (CLI)
+- Initial device implementation: software simulation
+- Code should prioritize readability, maintainability and testability over premature optimization.
+  Newer C++ standards may be introduced as the project evolves.
 
 6. Acceptance Criteria
+The project will be considered successful when:
 
 7. Future Extensions
